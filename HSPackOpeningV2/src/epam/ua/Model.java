@@ -10,39 +10,34 @@ public class Model {
     private int whitecount = 0;
     private int lilacount = 0;
     private int orangecount = 0;
-    private double min = 1;
-    private double max = 100;
+    private int min = 1;
+    private int max = 100;
 
     public void openPacks(int packCount) throws InterruptedException {
         for (int i = 0; i < packCount; i++) {
             Random rnd1 = new Random(System.currentTimeMillis());
-            Thread.sleep(1000);
-            double number1 = min - 1 + (23 - min) * rnd1.nextDouble();
-            number1 = Math.round(number1 * 100.0) / 100.0;
-
+            Thread.sleep(10);
+            int number1 = min  + rnd1.nextInt(27 - min + 1);
             if (number1 <= 1)
                 orangecount++;
-            if (number1 > 1 && number1 <= 4)
+            if (number1 > 1 && number1 <= 5)
                 lilacount++;
-            if (number1 > 4 && number1 <= 22)
+            if (number1 > 5 && number1 <= 27)
                 bluecount++;
             System.out.println(number1);
             for (int j = 0; j < 4; j++) {
                 Random rnd = new Random(System.currentTimeMillis());
-                Thread.sleep(1000);
-
-                double number = min - 1 + (max - min) * rnd.nextDouble();
-                number = Math.round(number * 100.0) / 100.0;
-
-                if (number <= 0.8)
+                Thread.sleep(10);
+                int number = min + rnd.nextInt(max - min + 1);
+                if (number <= 1)
                     orangecount++;
-                if (number > 0.8 && number <= 3)
+                if (number > 1 && number <= 3)
                     lilacount++;
-                if (number > 3 && number <= 15)
+                if (number > 3 && number <= 20)
                     bluecount++;
-                if (number > 15)
+                if (number > 20)
                     whitecount++;
-    //            System.out.println(number);
+               System.out.println(number);
             }
         }
     }
