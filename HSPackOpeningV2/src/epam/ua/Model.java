@@ -17,7 +17,7 @@ public class Model {
         for (int i = 0; i < packCount; i++) {
             Random rnd1 = new Random(System.currentTimeMillis());
             Thread.sleep(10);
-            int number1 = min  + rnd1.nextInt(27 - min + 1);
+            int number1 = min + rnd1.nextInt(27 - min + 1);
             if (number1 <= 1)
                 orangecount++;
             if (number1 > 1 && number1 <= 5)
@@ -37,23 +37,10 @@ public class Model {
                     bluecount++;
                 if (number > 20)
                     whitecount++;
-               System.out.println(number);
+                System.out.println(number);
             }
         }
     }
-
-    /* Lets make some changes
-    First cherryb commit
-    2ns cherryb commit
-    3rd cherryb commit
-    4th cherryb commit
-    */
-    /*
-    First rebase commit
-    2nd rebase com
-    3rd rebase com
-    * */
-
 
     public int getBluecount() {
         return bluecount;
