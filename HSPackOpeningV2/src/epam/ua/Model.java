@@ -42,6 +42,11 @@ public class Model {
         }
     }
 
+    /* Lets make some changes
+    
+    */
+
+
     public int getBluecount() {
         return bluecount;
     }
