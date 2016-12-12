@@ -48,6 +48,9 @@ public class Model {
     3rd cherryb commit
     4th cherryb commit
     */
+    /*
+    First rebase commit
+    * */
 
 
     public int getBluecount() {
